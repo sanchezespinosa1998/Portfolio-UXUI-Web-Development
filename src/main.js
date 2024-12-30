@@ -91,7 +91,7 @@ camera.position.setZ(30);
 // Cargar un modelo GLTF
 const loader = new GLTFLoader();
 loader.load(
-  '/public/Abstract4.gltf', // Ruta al archivo GLTF
+  './Abstract4.gltf', // Ruta al archivo GLTF
   (gltf) => {
     const model = gltf.scene;
     model.position.set(17, 0, 0); // Ajustar la posición del modelo
