@@ -130,7 +130,8 @@ loader.load(
     });
 
     
-
+//quiero que crear dos switchpoint en mi scroll para que reaccione distinto en cada punto, sin embargo reacciona con el switchpoint 2 cuando llega al 1.
+//Cual es el problema?
     
 
 window.addEventListener('scroll', () => {
@@ -154,7 +155,7 @@ window.addEventListener('scroll', () => {
     menuLeft.classList.remove('visible');
   } 
 
-  if (scrollPosition > switchPoint2) {
+  else if (scrollPosition > switchPoint2) {
     gsap.to(directionalLight, { intensity: 12, duration: 0.2, ease: 'power1.inOut' });
     gsap.to(directionalLight2, { intensity: 12, duration: 0.2, ease: 'power1.inOut' });
     gsap.to(directionalLight3, { intensity: 12, duration: 0.2, ease: 'power1.inOut' });
