@@ -136,7 +136,7 @@ loader.load(
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
   const switchPoint = window.innerHeight * 0.5; // Punto de cambio a mitad de la pantalla
-  const switchPoint2 = window.innerHeight * 0.75; // Punto de cambio a 3/4 partes de la pantalla
+  const switchPoint2 = window.innerHeight * 0.95; // Punto de cambio a 3/4 partes de la pantalla
   const menuLeft = document.getElementById('left');
 
   if (scrollPosition > switchPoint2) {
