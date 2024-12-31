@@ -209,12 +209,11 @@ function animateModel({ position, rotation, scale }) {
 
 
 
-
 const menuLeft = document.getElementById('left');
 
         window.addEventListener('scroll', () => {
-            const triggerPoint = 4500; // Punto en píxeles donde se hace visible
-            const scrollTop = window.scrollY;
+            const triggerPoint = window.scrollY; // Punto en píxeles donde se hace visible
+            const scrollTop = window.innerHeight / 3;
 
             if (scrollTop >= triggerPoint) {
                 menuLeft.classList.add('visible');
