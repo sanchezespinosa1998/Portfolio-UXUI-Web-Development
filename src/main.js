@@ -130,20 +130,28 @@ loader.load(
     });
 
     
-//quiero que crear dos switchpoint en mi scroll para que reaccione distinto en cada punto, sin embargo reacciona con el switchpoint 2 cuando llega al 1.
-//Cual es el problema?
+//quiero que crear dos switchpoint en mi scroll para que reaccione distinto en cada punto, sin embargo solo funciona el primer punto
     
 
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
-  const switchPoint = window.innerHeight / 2; // Punto de cambio en la mitad de la pantalla\
-  const switchPoint2 =  window.innerHeight / 0.75;
-
+  const switchPoint = window.innerHeight * 0.5; // Punto de cambio a mitad de la pantalla
+  const switchPoint2 = window.innerHeight * 0.75; // Punto de cambio a 3/4 partes de la pantalla
   const menuLeft = document.getElementById('left');
-  
-  
 
-  if (scrollPosition > switchPoint) {
+  if (scrollPosition > switchPoint2) {
+    // Acciones para switchPoint2
+    gsap.to(directionalLight, { intensity: 12, duration: 0.2, ease: 'power1.inOut' });
+    gsap.to(directionalLight2, { intensity: 12, duration: 0.2, ease: 'power1.inOut' });
+    gsap.to(directionalLight3, { intensity: 12, duration: 0.2, ease: 'power1.inOut' });
+    animateModel({
+      position: { x: 16, y: -5, z: 0 },
+      rotation: { x: 0, y: 0, z: 0 },
+      scale: { x: 7, y: 7, z: 7 }
+    });
+    menuLeft.classList.add('visible');
+  } else if (scrollPosition > switchPoint) {
+    // Acciones para switchPoint
     gsap.to(directionalLight, { intensity: 12, duration: 0.2, ease: 'power1.inOut' });
     gsap.to(directionalLight2, { intensity: 12, duration: 0.2, ease: 'power1.inOut' });
     gsap.to(directionalLight3, { intensity: 12, duration: 0.2, ease: 'power1.inOut' });
@@ -151,37 +159,20 @@ window.addEventListener('scroll', () => {
       position: { x: -30, y: 1, z: 0 },
       rotation: { x: Math.PI / 4, y: Math.PI / 4, z: 5 },
       scale: { x: 18, y: 18, z: 18 }
-  });
-
+    });
     menuLeft.classList.remove('visible');
-  } 
-
-  else if (scrollPosition > switchPoint2) {
-    gsap.to(directionalLight, { intensity: 12, duration: 0.2, ease: 'power1.inOut' });
-    gsap.to(directionalLight2, { intensity: 12, duration: 0.2, ease: 'power1.inOut' });
-    gsap.to(directionalLight3, { intensity: 12, duration: 0.2, ease: 'power1.inOut' });
-
-    menuLeft.classList.add('visible');
-    animateModel({
-    position: { x: 16, y: -5, z: 0 },
-    rotation: { x: 0, y: 0, z: 0 },
-    scale: { x: 7, y: 7, z: 7 }
-     });
-    
-  } 
-  
-  else {
-    gsap.to(directionalLight, { intensity: .12, duration: 0.2, ease: 'power1.inOut' });
-    gsap.to(directionalLight2, { intensity: .12, duration: 0.2, ease: 'power1.inOut' });
-    gsap.to(directionalLight3, { intensity: .12, duration: 0.2, ease: 'power1.inOut' });
+  } else {
+    // Acciones para cuando no se superan los puntos
+    gsap.to(directionalLight, { intensity: 0.12, duration: 0.2, ease: 'power1.inOut' });
+    gsap.to(directionalLight2, { intensity: 0.12, duration: 0.2, ease: 'power1.inOut' });
+    gsap.to(directionalLight3, { intensity: 0.12, duration: 0.2, ease: 'power1.inOut' });
     animateModel({
       position: { x: 17, y: 0, z: 0 },
       rotation: { x: 0, y: 0, z: 0 },
       scale: { x: 9, y: 9, z: 9 }
-  });
+    });
+    menuLeft.classList.remove('visible');
   }
-
-  menuLeft.classList.remove('visible');
 });
 
 
