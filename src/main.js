@@ -135,7 +135,9 @@ loader.load(
 
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
-  const switchPoint = window.innerHeight / 2; // Punto de cambio en la mitad de la pantalla
+  const switchPoint = window.innerHeight / 2; // Punto de cambio en la mitad de la pantalla\
+  const switchPoint2 = window.innerHeight / 4; // Punto de cambio en la mitad de la pantalla\
+  const menuLeft = document.getElementById('left');
   
   
 
@@ -148,7 +150,25 @@ window.addEventListener('scroll', () => {
       rotation: { x: Math.PI / 4, y: Math.PI / 4, z: 5 },
       scale: { x: 18, y: 18, z: 18 }
   });
-  } else {
+
+    menuLeft.classList.remove('visible');
+  } 
+
+  if (scrollPosition > switchPoint2) {
+    gsap.to(directionalLight, { intensity: 12, duration: 0.2, ease: 'power1.inOut' });
+    gsap.to(directionalLight2, { intensity: 12, duration: 0.2, ease: 'power1.inOut' });
+    gsap.to(directionalLight3, { intensity: 12, duration: 0.2, ease: 'power1.inOut' });
+
+    menuLeft.classList.add('visible');
+    animateModel({
+    position: { x: 16, y: -5, z: 0 },
+    rotation: { x: 0, y: 0, z: 0 },
+    scale: { x: 7, y: 7, z: 7 }
+     });
+    
+  } 
+  
+  else {
     gsap.to(directionalLight, { intensity: .12, duration: 0.2, ease: 'power1.inOut' });
     gsap.to(directionalLight2, { intensity: .12, duration: 0.2, ease: 'power1.inOut' });
     gsap.to(directionalLight3, { intensity: .12, duration: 0.2, ease: 'power1.inOut' });
@@ -158,6 +178,8 @@ window.addEventListener('scroll', () => {
       scale: { x: 9, y: 9, z: 9 }
   });
   }
+
+  menuLeft.classList.remove('visible');
 });
 
 
@@ -208,27 +230,6 @@ function animateModel({ position, rotation, scale }) {
 }
 
 
-
-const menuLeft = document.getElementById('left');
-
-        window.addEventListener('scroll', () => {
-            const triggerPoint = window.scrollY; // Punto en píxeles donde se hace visible
-            const scrollTop = window.innerHeight / 3;
-
-            if (scrollTop >= triggerPoint) {
-                menuLeft.classList.add('visible');
-                animateModel({
-                  position: { x: 16, y: -5, z: 0 },
-                  rotation: { x: 0, y: 0, z: 0 },
-                  scale: { x: 7, y: 7, z: 7 }
-              });
-            } else {
-                menuLeft.classList.remove('visible');
-            }
-
-
-            
-        });
 
 
 
