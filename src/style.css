@@ -69,11 +69,7 @@ canvas{
   
 }
 
-.logo:hover {
-  font-family: "bricolage-grotesque-72-scond", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
+
 
 .menu {
   list-style: none;
@@ -102,13 +98,6 @@ canvas{
   
 }
 
-.menu a:hover {
- 
-  
-  font-family: "bricolage-grotesque-72-scond", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
 
 
 
@@ -235,14 +224,6 @@ body.dark-mode .info div:hover h2{
   
 }
 
-.theme-button:hover{
-
-
-  font-family: "bricolage-grotesque-72-scond", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-  
-}
 
 
 

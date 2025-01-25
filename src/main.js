@@ -1,21 +1,7 @@
-//ordena y optimiza el codigo
-
-const toggleThemeButton = document.getElementById('toggle-theme');
-
-toggleThemeButton.addEventListener('click', () => {
-    
-    document.body.classList.toggle('dark-mode');
 
 
-    if (document.body.classList.contains('dark-mode')) {
-        toggleThemeButton.textContent = 'COLOR MODE';
-    } else {
-        toggleThemeButton.textContent = 'COLOR MODE';
-    }
-});
 
 
-// quiero añadir aqui la funcionalidad de poner la intensidad
 window.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY; 
     const switchPoint = window.innerHeight / 2; 
@@ -130,7 +116,6 @@ loader.load(
     });
 
     
-//quiero que crear dos switchpoint en mi scroll para que reaccione distinto en cada punto, sin embargo solo funciona el primer punto
     
 
 window.addEventListener('scroll', () => {
@@ -208,7 +193,6 @@ scene.add(directionalLight3.target);
 
     
    
-// Función para renderizar la escena
 
    
 function animateModel({ position, rotation, scale }) {
