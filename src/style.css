@@ -528,7 +528,7 @@ h2{
 
 .section1 {
   display: flex;
-  
+  font-size: 9vw;
   height: 100vh; /* Simula una página más larga */
   position: relative;
   z-index: 10;
@@ -559,7 +559,7 @@ h2{
   font-family: "bricolage-grotesque-72-scond", sans-serif;
   font-weight: 800;
   font-style: normal;
-  font-size: 4em;
+  font-size: 9vw;
 }
 
 
