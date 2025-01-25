@@ -583,7 +583,7 @@ h2{
 .content {
   height: 100%; /* Simula contenido largo */
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas */
+  grid-template-columns: 1fr; /* Dos columnas */
   gap: 20px; /* Espacio entre columnas */
 }
 
