@@ -1,5 +1,9 @@
 
 
+      document.getElementById("toggle-theme").addEventListener("click", function() {
+          document.getElementById("section1").scrollIntoView({ behavior: "smooth" });
+      });
+    
 
 
 window.addEventListener('scroll', () => {
