@@ -164,7 +164,7 @@ body.dark-mode .info div {
 body.dark-mode .info div:hover{ 
 
   background-color: #ffffff;
-  color: #000000;
+  color: #121212;
   transform: scale(1.05);
   
   
@@ -297,7 +297,7 @@ button {
 
   cursor: pointer;
 
-  color: #000000;
+  color: #121212;
   
 
  
@@ -321,7 +321,7 @@ button {
 
 .link {
   text-decoration: none;
-  color: #000000;
+  color: #121212;
   font-size: 9vw;
   line-height: 100px;
   padding: 10px 15px;

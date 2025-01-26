@@ -475,7 +475,7 @@ link4.addEventListener('mouseleave', () => {
 );
 
 
-
+//esta parte de mi codigo esta cambiando la categoria id al texto cuando paso el raton por encima, quiero que vuelva a su estado original cuando haga lo quite
 
 const textElement = document.getElementById('text');
         const text = textElement.textContent;
