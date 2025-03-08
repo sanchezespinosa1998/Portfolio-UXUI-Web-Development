@@ -582,7 +582,7 @@ h2{
 }
 
 .content {
-  height: 100%; /* Simula contenido largo */
+  height: 100%; 
   display: grid;
   grid-template-columns: 1fr; /* Dos columnas */
   gap: 20px; /* Espacio entre columnas */
@@ -599,6 +599,6 @@ h2{
 
 #behance{
 
-  font-size: 2.5vw;
+  font-size: 2.6vw;
   text-decoration: none;
 }
