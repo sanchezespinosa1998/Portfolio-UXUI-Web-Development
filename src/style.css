@@ -297,7 +297,7 @@ button {
 
   cursor: pointer;
 
-  color: #121212;
+  color: #292929;
   
 
  
@@ -323,7 +323,8 @@ button {
   text-decoration: none;
   color: #121212;
   font-size: 9vw;
-  line-height: 100px;
+  
+  line-height: 0.6;
   padding: 10px 15px;
   
   transition: background-color 0.3s, color 0.3s;
